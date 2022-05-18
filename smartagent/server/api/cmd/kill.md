@@ -9,13 +9,17 @@
 
 ## 返回值
 
-    {
-        "code": 0
-    }
+```json
+{
+  "code": 0
+}
+```
 
 ## 错误，未找到机器
 
-    {
-        "code": 404,
-        "msg": "(client|process) not found"
-    }
+```json
+{
+  "code": 404,
+  "msg": "(client|process) not found"
+}
+```

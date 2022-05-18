@@ -8,14 +8,18 @@
 
 ## 返回值
 
-    {
-        "code": 0,
-        "payload": 主机ID
-    }
+```json
+{
+  "code": 0,
+  "payload": 主机ID
+}
+```
 
 ## 错误，未找到
 
-    {
-        "code": 404,
-        "msg": "client not found"
-    }
+```json
+{
+  "code": 404,
+  "msg": "client not found"
+}
+```

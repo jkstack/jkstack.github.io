@@ -18,35 +18,45 @@
 
 ## 返回值
 
-    {
-        "code": 0,
-        "payload": null
-    }
+```json
+{
+  "code": 0,
+  "payload": null
+}
+```
 
 ## 错误，未找到机器
 
-    {
-        "code": 404,
-        "msg": "client not found"
-    }
+```json
+{
+  "code": 404,
+  "msg": "client not found"
+}
+```
 
 ## 错误，其他运行时错误
 
-    {
-        "code": 500,
-        "msg": 错误内容
-    }
+```json
+{
+  "code": 500,
+  "msg": 错误内容
+}
+```
 
 ## 错误，上传失败
 
-    {
-        "code": 1,
-        "msg": 错误内容
-    }
+```json
+{
+  "code": 1,
+  "msg": 错误内容
+}
+```
 
 ## 错误，文件内容错误
 
-    {
-        "code": 2,
-        "msg": 错误内容
-    }
+```json
+{
+  "code": 2,
+  "msg": 错误内容
+}
+```

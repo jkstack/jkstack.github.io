@@ -16,31 +16,39 @@
 
 ## 返回值
 
-    {
-        "code": 0,
-        "payload": {
-            "channel_id": 获取stdout输出信息的管道id,
-            "pid": 进程id
-        }
-    }
+```json
+{
+  "code": 0,
+  "payload": {
+    "channel_id": 获取stdout输出信息的管道id,
+    "pid": 进程id
+  }
+}
+```
 
 ## 错误，未找到机器
 
-    {
-        "code": 404,
-        "msg": "client not found"
-    }
+```json
+{
+  "code": 404,
+  "msg": "client not found"
+}
+```
 
 ## 错误，超时
 
-    {
-        "code": 408,
-        "msg": "timeout"
-    }
+```json
+{
+  "code": 408,
+  "msg": "timeout"
+}
+```
 
 ## 错误，命令执行失败
 
-    {
-        "code": 1,
-        "msg": 原因
-    }
+```json
+{
+  "code": 1,
+  "msg": 原因
+}
+```

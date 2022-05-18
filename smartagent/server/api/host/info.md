@@ -8,10 +8,12 @@
 
 ## 返回值
 
-    {
-        "code": 0,
-        "payload": {
-            "hostname": 主机名,
-            "os": linux或windows
-        }
-    }
+```json
+{
+  "code": 0,
+  "payload": {
+    "hostname": 主机名,
+    "os": linux或windows
+  }
+}
+```
