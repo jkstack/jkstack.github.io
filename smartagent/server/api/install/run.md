@@ -15,24 +15,30 @@
 
 ## 返回值
 
-    {
-        "code": 0,
-        "payload": 任务ID
-    }
+```json
+{
+  "code": 0,
+  "payload": 任务ID
+}
+```
 
 ## 错误，未找到机器
 
-    {
-        "code": 404,
-        "msg": "client not found"
-    }
+```json
+{
+  "code": 404,
+  "msg": "client not found"
+}
+```
 
 ## 错误，其他运行时错误
 
-    {
-        "code": 500,
-        "msg": 错误内容
-    }
+```json
+{
+  "code": 500,
+  "msg": 错误内容
+}
+```
 
 ## 说明
 
