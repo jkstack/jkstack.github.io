@@ -21,7 +21,9 @@
 
 ### docker参数
 
-待补充
+1. `ids`: 目标机器id，csv
+2. `ct_name`: 容器名称
+3. `ct_tag`: 容器tag，可选
 
 ### logtail参数
 
