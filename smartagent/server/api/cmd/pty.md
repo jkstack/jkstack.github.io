@@ -12,10 +12,10 @@
     http_code=200
     body=内容
 
-## channel不存在
+## pid不存在
 
     http_code=404
-    body=channel not found
+    body=process not found
 
 ## 错误，其他异常
 
