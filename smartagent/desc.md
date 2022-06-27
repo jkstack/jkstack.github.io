@@ -9,6 +9,37 @@ smartagent底层通过websocket协议进行服务端与客户端的RPC通信，�
 3. executor为插件执行器，在非windows操作系统下支持插件切换到其他用户身份运行
 4. smartagent使用[containerd/cgroups](https://github.com/containerd/cgroups)库来限制linux系统下的资源使用，目前仅支持cgroups v1
 
+## Msg结构
+
+Msg结构为smartagent底层通信的核心数据结构，其结构如下
+
+    type Msg struct {
+        Type      TypeName    `json:"type"`             // 消息类型，详见消息类型章节
+        Important bool        `json:"-"`                // 是否是关键消息
+        TaskID    string      `json:"tid,omitempty"`    // 任务ID
+        Plugin    *PluginInfo `json:"plugin,omitempty"` // 所需调用的插件信息
+        ErrorMsg  string      `json:"errmsg,omitempty"` // 错误消息的详情
+        // ctrl
+        Come      *ComePayload      `json:"come,omitempty"`      // 握手请求
+        Handshake *HandshakePayload `json:"handshake,omitempty"` // 握手返回结果
+        ...
+    }
+
+1. [type](https://github.com/jkstack/anet/blob/master/types.go)字段是一个整数类型的字段，用于表明该消息的类型，目前已定义区段如下
+
+        0~9: 系统保留，用于服务端到agent通信
+        10+: 各插件使用
+2. tid字段用于表明该消息的id
+3. plugin字段用于表明该消息所需使用的插件信息，其中包含插件的版本号等，当agent收到的msg非系统消息且不包含plugin信息时该消息将被丢弃
+
+        type PluginInfo struct {
+            Name    string         `json:"name"`    // 插件名称
+            Version string         `json:"version"` // 插件版本号
+            MD5     [md5.Size]byte `json:"md5"`     // 插件文件的md5
+            URI     string         `json:"uri"`     // 插件下载的uri
+        }
+4. 在Msg结构的设计时，应尽量缩短字段名并增加omitempty关键字来忽略控制，以此来减少数据传输时的数据量
+
 ## executor与插件化
 
 executor是smartagent中的插件执行器，目前实现了以下功能：
