@@ -61,10 +61,10 @@ elasticsearch:
 ## 错误，命令执行失败
 
 ```json
-    {
-      "code": 1,
-      "msg": "错误原因"
-    }
+{
+  "code": 1,
+  "msg": "错误原因"
+}
 ```
 
 ## 说明
@@ -77,12 +77,12 @@ elasticsearch:
 
     ```json
     {
-        "job_num": "20220706-00002-f230bae72f2ca269",  // channel_id
-        "target": "agent-001",  // 执行节点ID
-        "status": "SUCCESS",    // SUCCESS=执行成功；FAILURE=执行失败；PENDING=执行中
-        "create_date": 0,       // 开始时间戳
-        "end_date": 0,          // 结束时间戳未完成时为0
-        "logs": "YWJjZA=="      // 输出内容base64编码，当超过64k数据时，内容为头64k数据加上...
+      "job_num": "20220706-00002-f230bae72f2ca269",  // channel_id
+      "target": "agent-001",  // 执行节点ID
+      "status": "SUCCESS",    // SUCCESS=执行成功；FAILURE=执行失败；PENDING=执行中
+      "create_date": 0,       // 开始时间戳
+      "end_date": 0,          // 结束时间戳未完成时为0
+      "logs": "YWJjZA=="      // 输出内容base64编码，当超过64k数据时，内容为头64k数据加上...
     }
     ```
 
