@@ -1,6 +1,8 @@
 baseURL = "/"
 title = "精鲲开源项目文档"
 
+publishDir = docs
+
 # Language settings
 contentDir = "content"
 defaultContentLanguage = "zh"
