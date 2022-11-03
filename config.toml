@@ -3,7 +3,7 @@ title = "精鲲开源项目文档"
 
 # Language settings
 contentDir = "content"
-defaultContentLanguage = "zh"
+defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
@@ -59,7 +59,7 @@ id = "UA-00000000-0"
 # Language configuration
 
 [languages]
-[languages.zh]
+[languages.zh-cn]
 title = "精鲲开源项目文档"
 description = "精鲲开源项目文档"
 languageName = "中文"
@@ -110,7 +110,7 @@ url_latest_version = "https://example.com"
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = "https://github.com/jkstack/jkstack.github.io"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/jkstack/jkstack.github.io"
+github_project_repo = "https://github.com/jkstack"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
