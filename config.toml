@@ -60,7 +60,7 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.zh-cn]
-title = ""
+title = "JKStack Docs"
 description = "精鲲开源项目文档"
 languageName = "中文"
 time_format_default = "2006-01-02"
