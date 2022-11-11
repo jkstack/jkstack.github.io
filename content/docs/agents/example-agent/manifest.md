@@ -37,46 +37,46 @@ description: >
 - key: basic.id
   type: string
   name:
-    - zh: AgentID
+    zh: AgentID
   desc:
-    - zh: Agent的ID，在当前服务器下的集群内唯一
+    zh: Agent的ID，在当前服务器下的集群内唯一
 - key: basic.server
   type: naddr
   name:
-    - zh: 服务端地址
+    zh: 服务端地址
   desc:
-    - zh: 链接服务器端的地址
+    zh: 链接服务器端的地址
   default: 127.0.0.1:13081
 - key: basic.log.target
   type: csv
   name:
-    - zh: 日志保存目标
+    zh: 日志保存目标
   desc:
-    - zh: 日志保存目标，目前仅支持stdout和文件
+    zh: 日志保存目标，目前仅支持stdout和文件
   default: stdout
   csv_valid: [ stdout, file ]
 - key: basic.log.dir
   type: path
   name:
-    - zh: 日志保存路径
+    zh: 日志保存路径
   desc:
-    - zh: 日志保存路径
+    zh: 日志保存路径
   default: ./logs
 - key: basic.log.size
   type: bytes
   name:
-    - zh: 日志文件滚动大小
+    zh: 日志文件滚动大小
   desc:
-    - zh: 日志文件生成时每个文件的大小
+    zh: 日志文件生成时每个文件的大小
   default: 10M
   min: 1M
   max: 100M
 - key: basic.log.rotate
   type: uint
   name:
-    - zh: 日志文件保留份数
+    zh: 日志文件保留份数
   desc:
-    - zh: 日志文件生成时最多保留份数
+    zh: 日志文件生成时最多保留份数
   default: 7
   min: 1
   max: 100
