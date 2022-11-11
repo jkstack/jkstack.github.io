@@ -7,3 +7,5 @@ description: >
 ---
 
 项目地址: https://github.com/jkstack/jkframe
+
+最新版本: ![version](https://img.shields.io/github/v/tag/jkstack/jkframe)
