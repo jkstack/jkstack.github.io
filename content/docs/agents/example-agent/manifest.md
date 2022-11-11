@@ -2,6 +2,8 @@
 title: "配置项描述"
 linkTitle: "配置项描述"
 weight: 3
+description: >
+    Agent配置文件的描述文件结构定义。
 ---
 
 每一个Agent项目中的conf目录下必须包含一个`manifest.yaml`文件用于描述该Agent的配置项信息，该文件被用于外部工具做自动化部署时的展示。

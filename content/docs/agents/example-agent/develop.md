@@ -2,9 +2,11 @@
 title: "Agent开发"
 linkTitle: "Agent开发"
 weight: 2
+description: >
+    Agent开发规范与标准化打包方法。
 ---
 
-## agent开发
+## Agent开发
 
 1. 创建项目并导入[libagent](github.com/jkstack/libagent)库
 
