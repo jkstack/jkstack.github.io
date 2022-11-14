@@ -30,6 +30,7 @@ description: >
 - `min`: (可选)最小值，支持的数据类型`int`、`uint`、`float`、`bytes`、`duration`
 - `max`: (可选)最大值，支持的数据类型`int`、`uint`、`float`、`bytes`、`duration`
 - `len`: (可选)最大长度，支持的数据类型`string`、`csv`、`path`
+- `allow_relative`: (可选)是否允许使用相对路径，支持的数据类型`path`
 
 ## 示例
 
@@ -81,3 +82,48 @@ description: >
   min: 1
   max: 100
 ```
+
+## 关联关系
+
+### 示例1
+
+```python
+log.target = stdout,file
+log.dir = ./logs
+log.size = 10M
+log.rotate = 7
+```
+
+当`log.target`字段未设置`file`属性时，`log.dir`、`log.size`、`log.rotate`配置项是无效的。
+
+### 示例2
+
+```python
+monitor.enabled = true
+monitor.interval = 10s
+```
+
+当`monitor.enabled`字段设置为false时，`monitor.interval`配置项是无效的。
+
+基于以上两种情况，增加配置字段如下：
+
+```yaml
+- key: basic.log.dir
+  ...
+  enabled:
+    when:
+      target: basic.log.target
+      contain: file
+- key: basic.monitor.interval
+  ...
+  enabled:
+    when:
+      target: basic.monitor.enabled
+      equal: true
+```
+
+1. `enabled`字段用于表示当前字段的有效范围
+2. `when`字段表示当条件中的描述符合要求时该字段有效
+3. `target`: 该字段表示需要关联到的原始字段名称
+4. `contain`: 针对于原始字段为`csv`类型时csv内容中包含该配置项时当前字段才有效
+5. `equal`: 针对于原始字段为`bool`或`数值`类型时原始字段的值与要求内容相符时才有效
