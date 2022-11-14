@@ -9,3 +9,7 @@ description: >
 ## 产品架构图
 
 ![架构图](assets/%E6%9E%B6%E6%9E%84%E5%9B%BE.png)
+
+## 部署架构图
+
+![架构图](assets/%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%E5%9B%BE.png)
