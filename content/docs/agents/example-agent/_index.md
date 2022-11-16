@@ -7,3 +7,5 @@ description: >
 ---
 
 项目地址: https://github.com/jkstack/example-agent
+
+最新版本: ![version](https://img.shields.io/github/v/release/jkstack/example-agent)
