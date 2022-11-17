@@ -31,6 +31,7 @@ description: >
 - `max`: (可选)最大值，支持的数据类型`int`、`uint`、`float`、`bytes`、`duration`
 - `len`: (可选)最大长度，支持的数据类型`string`、`csv`、`path`
 - `allow_relative`: (可选)是否允许使用相对路径，支持的数据类型`path`
+- `category`: (可选)配置项分类
 
 ## 示例
 
