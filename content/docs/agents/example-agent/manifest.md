@@ -24,6 +24,7 @@ description: >
    - `path`: 文件路径
    - `bytes`: 可视化字节数，(n)G、(n)M、(n)KB、(n)B等
    - `duration`: 时长，(n)h、(n)m、(n)s等
+- `required`: 是否必填
 - `default`: (可选)默认值
 - `csv_valid`: (可选)csv字段允许输入的内容
 - `str_valid`: (可选)string类型的匹配正则表达式
@@ -42,6 +43,7 @@ description: >
     zh: AgentID
   desc:
     zh: Agent的ID，在当前服务器下的集群内唯一
+  required: true
 - key: basic.server
   type: naddr
   name:
@@ -49,6 +51,7 @@ description: >
   desc:
     zh: 链接服务器端的地址
   default: 127.0.0.1:13081
+  required: true
 - key: basic.log.target
   type: csv
   name:
@@ -57,6 +60,7 @@ description: >
     zh: 日志保存目标，目前仅支持stdout和文件
   default: stdout
   csv_valid: [ stdout, file ]
+  required: false
 - key: basic.log.dir
   type: path
   name:
@@ -64,6 +68,7 @@ description: >
   desc:
     zh: 日志保存路径
   default: ./logs
+  required: false
 - key: basic.log.size
   type: bytes
   name:
@@ -73,6 +78,7 @@ description: >
   default: 10M
   min: 1M
   max: 100M
+  required: false
 - key: basic.log.rotate
   type: uint
   name:
@@ -82,6 +88,7 @@ description: >
   default: 7
   min: 1
   max: 100
+  required: false
 ```
 
 ## 关联关系
