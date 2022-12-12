@@ -24,6 +24,7 @@ description: >
    - `path`: 文件路径
    - `bytes`: 可视化字节数，(n)G、(n)M、(n)KB、(n)B等
    - `duration`: 时长，(n)h、(n)m、(n)s等
+   - `uuid`: 唯一标识ID
 - `required`: 是否必填
 - `default`: (可选)默认值
 - `csv_valid`: (可选)csv字段允许输入的内容
