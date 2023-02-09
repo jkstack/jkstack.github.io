@@ -28,6 +28,7 @@ description: >
    - `uuid`: 唯一标识ID
 - `required`: 是否必填
 - `default`: (可选)默认值
+- `enum_valid`: (可选)enum字段允许输入的内容
 - `csv_valid`: (可选)csv字段允许输入的内容
 - `str_valid`: (可选)string类型的匹配正则表达式
 - `min`: (可选)最小值，支持的数据类型`int`、`uint`、`float`、`bytes`、`duration`
